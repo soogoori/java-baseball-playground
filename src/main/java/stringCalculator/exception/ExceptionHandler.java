@@ -27,7 +27,7 @@ public class ExceptionHandler {
     // 나눗셈 시 음수 또는 0이 입력된 경우 예외 처리
     public static void validateDivision(int divisor) {
         if (divisor <= 0) {
-            throw new IllegalArgumentException("나눗셈의 분모는 0 또는 음수가 될 수 없습니다.");
+            throw new ArithmeticException("나눗셈의 분모는 0 또는 음수가 될 수 없습니다.");
         }
     }
 }
