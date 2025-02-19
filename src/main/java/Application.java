@@ -10,6 +10,7 @@ public class Application {
     public static void main(String[] args){
 
         InputView inputView = new InputView();
+        Calculate calc = new Calculate();
 
         // 계산식 입력받기
         String[] value = inputView.inputString();
@@ -21,7 +22,7 @@ public class Application {
         List<String> operators = resultMap.get("operators");
 
         // 계산하기
-        int result = Calculate.calculate(numbers, operators);
+        int result = calc.calculate(numbers, operators);
 
         // 계산결과 출력하기
         OutputView.printResultMessage(result);
