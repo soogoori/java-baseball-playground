@@ -9,10 +9,13 @@ import java.util.Map;
 public class Application {
     public static void main(String[] args){
 
+        InputView inputView = new InputView();
+
         // 계산식 입력받기
-        String[] value = InputView.inputString();
+        String[] value = inputView.inputString();
 
         Map<String, List<String>> resultMap = StringParser.parseString(value);
+
         // 계산식 파싱
         List<String> numbers =  resultMap.get("numbers");
         List<String> operators = resultMap.get("operators");

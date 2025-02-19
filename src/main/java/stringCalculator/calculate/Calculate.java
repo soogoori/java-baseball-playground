@@ -8,6 +8,7 @@ public class Calculate {
     private static final DivideOperation divideOperation = new DivideOperation();
     private static final MultiplyOperation multiplyOperation = new MultiplyOperation();
     private static final SubtractOperation subtractOperation = new SubtractOperation();
+
     public static int calculate(List<String> numbers, List<String> operators) {
 
         int result = Integer.parseInt(numbers.get(0));

@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class InputView {
 
-    public static String[] inputString() {
+    public String[] inputString() {
         OutputView.printCalculationMessage();
         System.out.println("숫자와 연산자 사이를 공백으로 구분하며 계산식을 입력해주세요.");
 
@@ -19,11 +19,11 @@ public class InputView {
         return value.split(" ");
     }
 
-    private static void checkBlankInput(String value) {
+    private void checkBlankInput(String value) {
         ExceptionHandler.validateExpression(value);
     }
 
-    private static void checkSyntax(String value) {
+    private void checkSyntax(String value) {
         ExceptionHandler.validateSyntax(value);
     }
 }
