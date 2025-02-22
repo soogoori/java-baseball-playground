@@ -22,6 +22,10 @@ public class InputView {
         return num;
     }
 
+    public String inputPlayGame() {
+        return scanner.nextLine();
+    }
+
     // 1에서 9까지 서로 다른 임의의 수 3개를 선택
     public String generateThreeUniqueNumbers() {
 
