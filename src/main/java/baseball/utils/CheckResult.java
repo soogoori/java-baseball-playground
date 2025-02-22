@@ -37,19 +37,6 @@ public class CheckResult {
         return ballInfo;
     }
 
-    // 같은 수가 전혀 없으면 포볼
-    public String is4Ball(String inputNum, String realNum) {
-        int ball = 0;
-
-        for(int i=0; i<3; i++) {
-            ball += calculate4Ball(inputNum.charAt(i), realNum);
-        }
-
-        if(ball==3) return "nothing";
-
-        return "";
-    }
-
     private int calculateStrike(char inputChar, char realChar) {
         if(inputChar == realChar) return 1;
         return 0;
@@ -57,11 +44,6 @@ public class CheckResult {
 
     private int calculateBall(char inputChar, char realChar, String realNum) {
         if((inputChar != realChar) && (realNum.contains(String.valueOf(inputChar)))) return 1;
-        return 0;
-    }
-
-    private int calculate4Ball(char inputChar, String realNum) {
-        if(!realNum.contains(String.valueOf(inputChar))) return 1;
         return 0;
     }
 }
